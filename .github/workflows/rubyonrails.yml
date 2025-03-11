@@ -34,8 +34,17 @@ jobs:
         with:
           bundler-cache: true
       # Add or replace database setup steps here
-      - name: Set up database schema
-        run: bin/rails db:setup
+      - name: Set up database
+        run: bin/rails db:create
+      
+      - name: Skip migrations if no files exist
+        if: hashFiles('db/migrate/*.rb') != ''
+        run: bin/rails db:migrate
+
+      - name: Seed database (if seeds exist)
+        if: hashFiles('db/seeds.rb') != ''
+        run: bin/rails db:seed
+
       # Add or replace test runners here
       - name: Run tests
         run: bin/rspec
