@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# PoseAndProseBe::Application is the main class that configures the Rails application.
+# It sets up the various settings and middleware for the application.
+
 require_relative 'boot'
 
 require 'rails/all'
