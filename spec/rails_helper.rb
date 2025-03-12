@@ -70,6 +70,8 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  RSpec.configure(&:infer_spec_type_from_file_location!)
+
   Shoulda::Matchers.configure do |should_config|
     should_config.integrate do |with|
       with.test_framework :rspec
