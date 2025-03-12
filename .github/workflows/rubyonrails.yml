@@ -46,9 +46,8 @@ jobs:
         run: bin/rails db:seed
 
       # Add or replace test runners here
-      - name: Run RSpec tests (if any)
-        if: hashFiles('spec/**/*_spec.rb') != ''
-        run: bin/rspec
+      - name: Run RSpec tests
+        run: bundle exec rspec spec
 
 
   lint:
