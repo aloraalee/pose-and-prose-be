@@ -58,6 +58,9 @@ gem 'bundler-audit'
 gem 'brakeman'
 
 gem 'rubocop'
+gem 'rubocop-rails', require: false
+gem 'rubocop-rspec', require: false
+gem 'rubocop-rspec_rails', require: false
 
 gem 'rack', '>= 3.1.12'
 
@@ -74,7 +77,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
 end
