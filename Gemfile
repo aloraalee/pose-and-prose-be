@@ -58,6 +58,9 @@ gem 'bundler-audit'
 gem 'brakeman'
 
 gem 'rubocop'
+gem 'rubocop-rails', require: false
+gem 'rubocop-rspec', require: false
+gem 'rubocop-rspec_rails', require: false
 
 gem 'rack', '>= 3.1.12'
 

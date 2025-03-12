@@ -1,6 +1,15 @@
 # .rubocop.yml
 
-# Set the maximum method length to 20 lines
+# .rubocop.yml
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-rspec_rails
+
+AllCops:
+  TargetRubyVersion: 3.2.2
+  NewCops: enable
+
 Metrics/MethodLength:
   Max: 20
 
